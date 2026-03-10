@@ -1,0 +1,155 @@
+:root {
+  --primary: #c1aed3;
+  --accent: #ff7675;
+  --text: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  /* CHANGE: Removed solid #000 to ensure transparency */
+  background: transparent; 
+  overflow-x: hidden;
+  height: 100%;
+}
+
+#bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100; /* Push it to the absolute bottom */
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  /* Add this to see if the video container itself is working */
+  background: #000; 
+}
+
+/* Ensure the overlay is NOT solid */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* If this is too dark, it looks like a black screen. Try lowering the 0.8 */
+  background: linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 100%);
+  z-index: -50;
+  pointer-events: none;
+}
+
+/* LOGIN LAYOUT */
+.full-center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  padding: 20px;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 35px;
+  padding: 50px 30px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+#pin-input {
+  width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255,255,255,0.05);
+  padding: 18px;
+  border-radius: 20px;
+  font-size: 1.8rem;
+  letter-spacing: 10px;
+  text-align: center;
+  margin-bottom: 25px;
+  outline: none;
+  color: #fff;
+  transition: 0.4s;
+}
+
+#pin-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 25px rgba(193, 174, 211, 0.3);
+}
+
+button, .glow-button {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  background: linear-gradient(45deg, #1e1e1e, #8e94f2);
+  color: white; border: none; padding: 18px;
+  border-radius: 20px; font-size: 1rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 2px;
+  cursor: pointer; transition: 0.3s ease;
+}
+
+/* LETTER CONTENT */
+.main-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 5;
+}
+
+.letter-window {
+  height: 65vh;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 30px;
+  padding: 40px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  /* The "Fading" effect for scrolling */
+  -webkit-mask-image: linear-gradient(transparent, black 15%, black 85%, transparent);
+}
+
+.scrolling-text {
+  color: #2d3436;
+  padding-top: 60vh;
+  animation: movieScroll 320s linear infinite; /* Ultra Slow Pace */
+  line-height: 1.8;
+}
+
+.letter-window:hover .scrolling-text { animation-play-state: paused; }
+
+@keyframes movieScroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-160%); }
+}
+
+/* UI ELEMENTS */
+.music-controls { position: fixed; bottom: 30px; right: 30px; z-index: 1000; }
+.hero { text-align: center; margin-bottom: 40px; }
+.name-title { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-top: 10px; }
+.profile-ring { width: 120px; height: 120px; border-radius: 50%; border: 4px solid white; margin: 0 auto; overflow: hidden; }
+#profile-pic { width: 100%; height: 100%; object-fit: cover; }
+.signature { font-family: 'Dancing Script', cursive; font-size: 2.5rem; color: #8e94f2; margin: 0; }
+.signature-name { font-weight: 700; color: #2d3436; font-size: 1.2rem; }
+#error-msg { color: var(--accent); margin-top: 15px; font-weight: 600; display: none; }
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}

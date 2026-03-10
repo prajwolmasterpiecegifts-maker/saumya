@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For My Favorite Person</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <img src="bg.png" id="bg-video" alt="background">
+
+    <div id="pin-screen" class="full-center-container">
+        <div class="glass-card auth-card">
+            <div class="lock-icon" style="font-size: 2rem; margin-bottom: 1rem;">🔒</div>
+            <h2>A Private Moment</h2>
+            <p class="sub-title">Enter our 7-digit secret code</p>
+            <input type="tel" id="pin-input" placeholder="·······" maxlength="7" autocomplete="off">
+            <button onclick="checkPin()">Enter My World</button>
+            <p id="error-msg">Who are you? 😡</p>
+        </div>
+    </div>
+
+    <div id="content" style="display: none;">
+        <div id="music-container" class="music-controls">
+            <button id="music-toggle" onclick="toggleMusic()">
+                <span id="music-icon">🎵</span>
+                <span id="music-text">Play Theme</span>
+            </button>
+            <audio id="bg-audio" loop>
+                <source src="Soch Na Sake FULL VIDEO SONG _ AIRLIFT _ Akshay Kumar, Nimrat Kaur _ Arijit Singh, Tulsi Kumar.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <main class="main-wrapper">
+            <header class="hero">
+                <div class="profile-ring">
+                    <img src="saumya.jpeg" alt="Saumya" id="profile-pic">
+                </div>
+                <h1 class="name-title">A Letter From My Heart</h1>
+                <p class="scroll-hint">(Touch/Hover to pause reading)</p>
+            </header>
+
+            <article class="letter-window">
+                <div class="scrolling-text">
+                    <div class="date-stamp" id="current-date" style="color: #8e94f2; font-weight: 600; margin-bottom: 20px;"></div>
+                    
+                    <p class="greeting" style="font-weight: 600; font-size: 1.2rem;">Dear Saumya,</p>
+                    
+                    <p>I don’t really know where to begin this letter, because sometimes the most genuine feelings are the hardest to put into words. But today I just felt like writing to you, not because there is a special occasion or reason, but simply because you are someone who unexpectedly became very special in my life in such a short time.</p>
+                    <p>it’s funny how life works. Some people stay around us for years and never truly understand us, while some people walk into our lives quietly and suddenly everything feels different. You are one of those rare people. Even though we haven’t known each other for a very long time, it somehow feels like our conversations, laughs, and little moments have created a connection that time cannot measure.</p>
+                    <p>Saumya, you have this very beautiful energy about you. It’s not just about how cute and adorable you are on the outside — though I must admit, you really are — but it’s the warmth you carry in your personality. There’s something very comforting about talking to you. When I see your messages or hear from you, it somehow makes the day feel lighter.</p>
+                    <p>Sometimes I think about how strange it is that someone can become important so quickly. We didn’t plan this friendship, it just happened naturally. One conversation led to another, one joke turned into endless laughter, and before I realized it, you had already become someone I genuinely look forward to talking to every day.</p>
+                    <p>What I admire about you the most is your simplicity. In a world where people often try too hard to impress others, you just remain yourself. That honesty and natural charm is something really special. It makes people feel comfortable around you, and I guess that’s why it was so easy for me to feel close to you.
+
+You know, sometimes when I think about our conversations, I smile without even realizing it. It’s those small moments — random talks, silly jokes, or even quiet conversations — that slowly build something meaningful between two people. And somehow, with you, those small moments feel very genuine and real.</p>
+                    <p>Saumya, I don’t know what the future holds for either of us. Life takes people in different directions, and sometimes paths change unexpectedly. But one thing I do know is that meeting you is something I’m truly grateful for. Some connections are rare, and I feel like ours is one of those beautiful surprises that life gives without warning.
+
+You are someone who brings positivity without even trying. Your kindness, your adorable way of talking, your little expressions — they all make you uniquely you. And honestly, that’s what makes you unforgettable.
+
+If I’m being completely honest, I feel lucky that our paths crossed. Because in this fast and busy world, it’s not easy to find someone who makes conversations feel effortless and time pass so quickly. With you, it just feels natural.</p>
+                    <p>Maybe this letter sounds a little emotional, but sometimes it’s nice to tell someone how much their presence is appreciated. You deserve to know that you are someone who brings happiness to the people around you, including me.
+
+No matter where life takes us, I hope we always keep this genuine connection and friendship alive. And I hope that whenever you read this letter, it reminds you that there is someone who truly values your presence and thinks you are an incredibly wonderful person.
+
+Stay the same beautiful, kind, and adorable Saumya that you are. The world honestly needs more people like you.</p>
+                    <p>Lots of love SAMU ❤️</p>
+                    
+                    <div class="signature-block" style="margin-top: 40px;">
+                        <p class="signature">With love,</p>
+                        <p class="signature-name">Rohit</p>
+                    </div>
+
+            </article>
+
+            <section class="vault-access">
+                <div class="glass-card vault-card" style="margin-top: 40px; max-width: 100%;">
+                    <h3>Our Memories</h3>
+                    <a href="https://drive.google.com/drive/folders/10o0hzOr5Gaid1DxEBNFJFFtepTKCdub9?usp=drive_link" target="_blank" class="glow-button">
+                        ✨ Open the Vault
+                    </a>
+                </div>
+            </section>
+            
+            <footer style="margin-top: 50px; opacity: 0.7; text-align: center;">
+                <p>Made with ❤️ for <b>Saumya</b></p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
