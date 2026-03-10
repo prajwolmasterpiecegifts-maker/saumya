@@ -50,5 +50,4 @@ function toggleMusic() {
         musicIcon.innerText = "🎵";
         musicText.innerText = "Play Theme";
     }
-
 }
