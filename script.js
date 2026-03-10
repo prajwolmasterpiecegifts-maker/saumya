@@ -1,6 +1,6 @@
 function checkPin() {
     const userPin = document.getElementById('pin-input').value;
-    const correctPin = "rohit"; 
+    const correctPin = "7654321"; 
 
     const pinScreen = document.getElementById('pin-screen');
     const content = document.getElementById('content');
@@ -50,4 +50,5 @@ function toggleMusic() {
         musicIcon.innerText = "🎵";
         musicText.innerText = "Play Theme";
     }
+
 }
